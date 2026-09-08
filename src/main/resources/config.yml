@@ -1,0 +1,31 @@
+# CommunityTrials configuration.
+# Live-editable values are also exposed in-game via /trialsadmin where noted.
+
+goal:
+  # Default deadline length applied when a goal is (re)started, in days.
+  default-deadline-days: 30
+  # Broadcast a milestone message every N blocks of progress...
+  milestone-interval: 1000
+  # ...or every N percent of the target, whichever is smaller. Set to 0 to disable percent milestones.
+  milestone-percent: 10
+
+punishment:
+  message: "&cThe community failed to reach its goal in time..."
+  command: ""
+
+border:
+  # Worlds the weekly auto-expansion and goal-success bonus apply to.
+  worlds:
+    - world
+  # Blocks added to the border every 7 real-world days, regardless of goal state.
+  weekly-amount: 100
+  # Extra blocks added immediately when a community goal succeeds.
+  success-bonus: 500
+  # If true, the border shrinks by failure-shrink-amount when a goal fails its deadline.
+  failure-shrink-enabled: false
+  failure-shrink-amount: 0
+  # How long (seconds) the animated border transition takes.
+  transition-seconds: 20
+
+messages:
+  prefix: "&8[&bTrials&8] &r"

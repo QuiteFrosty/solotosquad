@@ -1,0 +1,42 @@
+name: CommunityTrials
+version: '${project.version}'
+main: com.communitytrials.CommunityTrialsPlugin
+api-version: '1.21'
+author: CommunityTrials
+description: Community goal, side quest, plugin democracy, and world border progression.
+
+commands:
+  trials:
+    description: Open the Community Trials hub.
+    permission: communitytrials.use
+  sidequests:
+    description: Browse and claim side quests.
+    permission: communitytrials.use
+  suggestplugin:
+    description: Suggest a plugin for the next community vote.
+    usage: /<command> <name>
+    permission: communitytrials.use
+  trialshelp:
+    description: Show the Community Trials help page.
+    permission: communitytrials.use
+  trials_vote:
+    description: Vote for the next plugin.
+    permission: communitytrials.use
+  trialsadmin:
+    description: Open the Community Trials admin panel.
+    permission: communitytrials.admin
+  trialsgrant:
+    description: Grant a player manual progress on a quest.
+    usage: /<command> <questId> <player> <amount>
+    permission: communitytrials.admin
+  trialsreload:
+    description: Reload the Community Trials configuration.
+    permission: communitytrials.admin
+
+permissions:
+  communitytrials.use:
+    description: Access to all Community Trials player commands.
+    default: true
+  communitytrials.admin:
+    description: Access to Community Trials admin commands and menus.
+    default: op
